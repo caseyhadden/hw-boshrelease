@@ -1,0 +1,5 @@
+check process go-http-helloworld
+  with pidfile /var/vcap/sys/run/go-http-helloworld/go-http-helloworld.pid
+  start program "/var/vcap/jobs/go-http-helloworld/bin/monit_debugger go-http-helloworld_ctl '/var/vcap/jobs/go-http-helloworld/bin/go-http-helloworld_ctl start'"
+  stop program "/var/vcap/jobs/go-http-helloworld/bin/monit_debugger go-http-helloworld_ctl '/var/vcap/jobs/go-http-helloworld/bin/go-http-helloworld_ctl stop'"
+  group vcap
